@@ -23,7 +23,7 @@ pipeline {
         }
     stage('tfsec') {
       steps {
-        bat ' docker --version'
+        sh ' docker --version'
       }
     }
     stage('Approval for Terraform') {
@@ -34,8 +34,8 @@ pipeline {
 
         stage('terraform') {
             steps {
-              bat 'terraform init'
-              bat 'terraform apply -auto-approve -no-color'
+              sh 'terraform init'
+              sh 'terraform apply -auto-approve -no-color'
             }
         }
     }
