@@ -23,7 +23,7 @@ pipeline {
         }
     stage('tfsec') {
       steps {
-        sh ' docker --version'
+        sh 'docker --version'
       }
     }
     stage('Approval for Terraform') {
