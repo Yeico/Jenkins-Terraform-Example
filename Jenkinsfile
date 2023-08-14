@@ -5,7 +5,7 @@ pipeline {
     }
     tools
     {
-        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'Docker'
+        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
     }
     environment {
     DOCKER_CERT_PATH = credentials('tareaSergi')
